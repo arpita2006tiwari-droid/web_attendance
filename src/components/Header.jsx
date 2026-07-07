@@ -53,7 +53,7 @@ export default function Header() {
         <div className="flex justify-between h-16 items-center">
           
             <div className="flex items-center space-x-3 group">
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-2.5 rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-violet-600 dark:from-indigo-500 to-purple-500 dark:to-violet-500 p-2.5 rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300">
                 <CheckCircle2 className="h-6 w-6 text-white" />
               </div>
               <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 tracking-tight">
@@ -63,13 +63,13 @@ export default function Header() {
 
           <div className="flex items-center space-x-4 sm:space-x-6">
             <div className="hidden md:block text-right mr-2">
-              <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{format(currentDate, 'EEEE, MMM do')}</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">{currentTime}</p>
+              <p className="text-sm font-medium text-gray-800 dark:text-gray-50">{format(currentDate, 'EEEE, MMM do')}</p>
+              <p className="text-xs text-gray-500 dark:text-slate-300">{currentTime}</p>
             </div>
             
             <button
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2.5 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:shadow-md"
+              className="p-2.5 text-gray-500 hover:text-gray-800 dark:text-slate-300 dark:hover:text-white transition-colors rounded-xl bg-gray-100 dark:bg-[#1E1E1E] border border-gray-200 dark:border-gray-700 hover:shadow-md"
               title="Toggle Theme"
             >
               {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
@@ -79,20 +79,20 @@ export default function Header() {
             <div className="relative" ref={menuRef}>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2.5 text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400 transition-colors rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md flex items-center justify-center"
+                className="p-2.5 text-gray-700 hover:text-violet-600 dark:text-gray-50 dark:hover:text-indigo-500 transition-colors rounded-xl bg-white dark:bg-[#1E1E1E] border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md flex items-center justify-center"
               >
                 {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
 
               {isMenuOpen && (
-                <div className="absolute right-0 mt-3 w-56 rounded-2xl shadow-xl bg-white/90 dark:bg-gray-800/95 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden transform transition-all duration-200 origin-top-right z-50">
+                <div className="absolute right-0 mt-3 w-56 rounded-2xl shadow-xl bg-white/90 dark:bg-[#1E1E1E]/95 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden transform transition-all duration-200 origin-top-right z-50">
                   <div className="py-2">
                     <button 
                       onClick={() => { navigate('/dashboard'); setIsMenuOpen(false); }}
                       className={`w-full text-left px-4 py-3 flex items-center text-sm font-medium transition-colors ${
                         location.pathname === '/dashboard' 
-                        ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400' 
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                        ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-indigo-500' 
+                        : 'text-gray-700 dark:text-slate-300 hover:bg-neutral-50 dark:hover:bg-gray-700/50'
                       }`}
                     >
                       <LayoutDashboard className="w-4 h-4 mr-3" />
@@ -103,19 +103,19 @@ export default function Header() {
                       onClick={() => { navigate('/reports'); setIsMenuOpen(false); }}
                       className={`w-full text-left px-4 py-3 flex items-center text-sm font-medium transition-colors ${
                         location.pathname === '/reports' 
-                        ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400' 
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                        ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-indigo-500' 
+                        : 'text-gray-700 dark:text-slate-300 hover:bg-neutral-50 dark:hover:bg-gray-700/50'
                       }`}
                     >
                       <FileText className="w-4 h-4 mr-3" />
                       Reports
                     </button>
                     
-                    <div className="h-px bg-gray-200 dark:bg-gray-700/50 my-1"></div>
+                    <div className="h-px bg-gray-200 dark:bg-[#2A2A2A]/50 my-1"></div>
                     
                     <button 
                       onClick={() => { /* Settings placeholder */ setIsMenuOpen(false); }}
-                      className="w-full text-left px-4 py-3 flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+                      className="w-full text-left px-4 py-3 flex items-center text-sm font-medium text-gray-700 dark:text-slate-300 hover:bg-neutral-50 dark:hover:bg-gray-700/50 transition-colors"
                     >
                       <Settings className="w-4 h-4 mr-3" />
                       Settings
@@ -123,7 +123,7 @@ export default function Header() {
                     
                     <button
                       onClick={() => { handleLogout(); setIsMenuOpen(false); }}
-                      className="w-full text-left px-4 py-3 flex items-center text-sm font-medium text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/20 transition-colors"
+                      className="w-full text-left px-4 py-3 flex items-center text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/20 transition-colors"
                     >
                       <LogOut className="w-4 h-4 mr-3" />
                       Logout

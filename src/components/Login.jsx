@@ -36,13 +36,13 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 glass-card p-10 rounded-2xl animate-fade-in-up">
         <div>
-          <div className="mx-auto h-16 w-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg transform -translate-y-4">
+          <div className="mx-auto h-16 w-16 bg-gradient-to-br from-violet-600 dark:from-indigo-500 to-purple-500 dark:to-violet-500 rounded-2xl flex items-center justify-center shadow-lg transform -translate-y-4">
             <GraduationCap className="h-8 w-8 text-white" />
           </div>
           <h2 className="mt-2 text-center text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 tracking-tight">
             Teacher Portal
           </h2>
-          <p className="mt-3 text-center text-sm text-gray-500 dark:text-gray-400 font-medium">
+          <p className="mt-3 text-center text-sm text-gray-500 dark:text-slate-300 font-medium">
             Sign in to manage attendance
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Login() {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-600 placeholder-gray-500 text-gray-900 dark:text-white dark:bg-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-gray-200 dark:border-gray-700 placeholder-gray-500 text-gray-800 dark:text-gray-50 dark:bg-[#2A2A2A] focus:outline-none focus:ring-violet-600 dark:focus:ring-indigo-500 focus:border-violet-600 dark:focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -74,7 +74,7 @@ export default function Login() {
                 type="password"
                 autoComplete="current-password"
                 required
-                className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-gray-300 dark:border-gray-600 placeholder-gray-500 text-gray-900 dark:text-white dark:bg-gray-700 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-3 border border-gray-200 dark:border-gray-700 placeholder-gray-500 text-gray-800 dark:text-gray-50 dark:bg-[#2A2A2A] focus:outline-none focus:ring-violet-600 dark:focus:ring-indigo-500 focus:border-violet-600 dark:focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -86,10 +86,10 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"
+              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-violet-600 dark:bg-indigo-500 hover:bg-violet-700 dark:hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-600 dark:focus:ring-indigo-500 disabled:opacity-50 transition-colors"
             >
               <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                <LogIn className="h-5 w-5 text-blue-500 group-hover:text-blue-400" aria-hidden="true" />
+                <LogIn className="h-5 w-5 text-violet-600 dark:text-indigo-500 group-hover:text-blue-400" aria-hidden="true" />
               </span>
               {loading ? 'Signing in...' : 'Sign in'}
             </button>

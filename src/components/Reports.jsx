@@ -156,25 +156,25 @@ export default function Reports() {
         <div className="glass-card rounded-2xl p-8 mb-8 animate-fade-in-up w-full border border-white/40 dark:border-gray-700/50 shadow-2xl bg-gradient-to-br from-white/40 to-white/10 dark:from-gray-800/40 dark:to-gray-900/10" style={{animationDelay: '100ms'}}>
           <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
             <div className="w-full md:flex-1 transition-all duration-300">
-              <label className="block text-lg font-bold text-gray-800 dark:text-gray-200 mb-3 tracking-wide">
-                <Calendar className="inline-block w-5 h-5 mr-1.5 mb-1 text-blue-500" />
+              <label className="block text-lg font-bold text-gray-800 dark:text-gray-50 mb-3 tracking-wide">
+                <Calendar className="inline-block w-5 h-5 mr-1.5 mb-1 text-violet-600 dark:text-indigo-500" />
                 Filter by Date
               </label>
               <input
                 type="date"
-                className="block w-full rounded-xl border-gray-200 dark:border-gray-600 bg-white/70 dark:bg-gray-800/80 text-gray-900 dark:text-white py-4 px-5 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition-all shadow-sm hover:bg-white dark:hover:bg-gray-800 cursor-pointer backdrop-blur-md font-semibold"
+                className="block w-full rounded-xl border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-[#1E1E1E]/80 text-gray-800 dark:text-gray-50 py-4 px-5 focus:ring-2 focus:ring-violet-600 dark:focus:ring-indigo-500 focus:border-transparent text-lg transition-all shadow-sm hover:bg-white dark:hover:bg-gray-800 cursor-pointer backdrop-blur-md font-semibold"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
               />
             </div>
             
             <div className="w-full md:flex-1 transition-all duration-300">
-              <label className="block text-lg font-bold text-gray-800 dark:text-gray-200 mb-3 tracking-wide">
-                <Building2 className="inline-block w-5 h-5 mr-1.5 mb-1 text-blue-500" />
+              <label className="block text-lg font-bold text-gray-800 dark:text-gray-50 mb-3 tracking-wide">
+                <Building2 className="inline-block w-5 h-5 mr-1.5 mb-1 text-violet-600 dark:text-indigo-500" />
                 Filter by Center
               </label>
               <select
-                className="block w-full rounded-xl border-gray-200 dark:border-gray-600 bg-white/70 dark:bg-gray-800/80 text-gray-900 dark:text-white py-4 px-5 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg transition-all shadow-sm hover:bg-white dark:hover:bg-gray-800 cursor-pointer backdrop-blur-md font-semibold"
+                className="block w-full rounded-xl border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-[#1E1E1E]/80 text-gray-800 dark:text-gray-50 py-4 px-5 focus:ring-2 focus:ring-violet-600 dark:focus:ring-indigo-500 focus:border-transparent text-lg transition-all shadow-sm hover:bg-white dark:hover:bg-gray-800 cursor-pointer backdrop-blur-md font-semibold"
                 value={selectedCenter}
                 onChange={(e) => setSelectedCenter(e.target.value)}
               >
@@ -187,12 +187,12 @@ export default function Reports() {
             
             {selectedCenter && (
               <div className="animate-fade-in-up w-full md:flex-1 transition-all duration-300" style={{animationDelay: '50ms'}}>
-                <label className="block text-lg font-bold text-gray-800 dark:text-gray-200 mb-3 tracking-wide">
-                  <Users className="inline-block w-5 h-5 mr-1.5 mb-1 text-purple-500" />
+                <label className="block text-lg font-bold text-gray-800 dark:text-gray-50 mb-3 tracking-wide">
+                  <Users className="inline-block w-5 h-5 mr-1.5 mb-1 text-purple-500 dark:text-violet-500" />
                   Filter by Batch
                 </label>
                 <select
-                  className="block w-full rounded-xl border-gray-200 dark:border-gray-600 bg-white/70 dark:bg-gray-800/80 text-gray-900 dark:text-white py-4 px-5 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg transition-all shadow-sm hover:bg-white dark:hover:bg-gray-800 cursor-pointer backdrop-blur-md font-semibold"
+                  className="block w-full rounded-xl border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-[#1E1E1E]/80 text-gray-800 dark:text-gray-50 py-4 px-5 focus:ring-2 focus:ring-purple-500 dark:focus:ring-violet-500 focus:border-transparent text-lg transition-all shadow-sm hover:bg-white dark:hover:bg-gray-800 cursor-pointer backdrop-blur-md font-semibold"
                   value={selectedBatch}
                   onChange={(e) => setSelectedBatch(e.target.value)}
                 >
@@ -208,15 +208,15 @@ export default function Reports() {
 
         {/* Results */}
         <div className="glass-card rounded-2xl overflow-hidden flex flex-col animate-fade-in-up" style={{animationDelay: '200ms'}}>
-          <div className="p-4 border-b border-gray-200 dark:border-gray-700/50 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-gray-50/50 dark:bg-gray-800/30">
+          <div className="p-4 border-b border-gray-200 dark:border-gray-700/50 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-neutral-50/50 dark:bg-[#1E1E1E]/30">
             <div className="relative flex-1 max-w-sm">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Search className="h-5 w-5 text-gray-400" />
+                <Search className="h-5 w-5 text-gray-500" />
               </div>
               <input
                 type="text"
                 placeholder="Search by student name or roll no..."
-                className="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/50 dark:bg-gray-700/50 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full pl-10 pr-3 py-2 border border-gray-200 dark:border-gray-700 rounded-lg bg-white/50 dark:bg-[#2A2A2A]/50 text-gray-800 dark:text-gray-50 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-violet-600 dark:focus:ring-indigo-500 focus:border-violet-600 dark:focus:border-indigo-500 sm:text-sm"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -238,13 +238,13 @@ export default function Reports() {
                 <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
               </div>
             ) : filteredReports.length === 0 ? (
-              <div className="text-center py-20 text-gray-500 dark:text-gray-400">
-                <FileText className="mx-auto h-12 w-12 text-gray-400 mb-3" />
+              <div className="text-center py-20 text-gray-500 dark:text-slate-300">
+                <FileText className="mx-auto h-12 w-12 text-gray-500 mb-3" />
                 <p>No attendance records found for these filters.</p>
               </div>
             ) : (
               <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700/50">
-                <thead className="bg-gray-50/50 dark:bg-gray-800/30">
+                <thead className="bg-neutral-50/50 dark:bg-[#1E1E1E]/30">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date & Time</th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student Name</th>
@@ -256,29 +256,29 @@ export default function Reports() {
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700/50">
                   {filteredReports.map((report, idx) => (
-                    <tr key={idx} className="hover:bg-gray-50/50 dark:hover:bg-gray-700/30 transition-colors">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                    <tr key={idx} className="hover:bg-neutral-50/50 dark:hover:bg-gray-700/30 transition-colors">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-slate-300">
                         {report.attendance_date} <br/>
-                        <span className="text-xs text-gray-400">{report.attendance_time}</span>
+                        <span className="text-xs text-gray-500">{report.attendance_time}</span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-50">
                         {report.student_name}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-slate-300">
                         {report.roll_number}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-slate-300">
                         {report.center_name}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-slate-300">
                         {report.batch_name}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
                         <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full 
-                          ${report.status === 'Present' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' : ''}
-                          ${report.status === 'Absent' ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' : ''}
-                          ${report.status === 'Late' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400' : ''}
-                          ${report.status === 'Leave' ? 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400' : ''}
+                          ${report.status === 'Present' ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:bg-green-900/30 dark:text-green-400' : ''}
+                          ${report.status === 'Absent' ? 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:bg-red-900/30 dark:text-red-400' : ''}
+                          ${report.status === 'Late' ? 'bg-yellow-100 dark:bg-amber-900/30 text-yellow-800 dark:bg-yellow-900/30 dark:text-amber-400' : ''}
+                          ${report.status === 'Leave' ? 'bg-violet-100 dark:bg-violet-900/30 text-purple-800 dark:bg-purple-900/30 dark:text-violet-500' : ''}
                         `}>
                           {report.status}
                         </span>
