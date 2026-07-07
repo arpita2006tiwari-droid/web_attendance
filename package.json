@@ -1,16 +1,30 @@
 {
-  "name": "web-attendance",
-  "version": "1.0.0",
-  "description": "Google Sheets-Based Student Attendance Web App",
-  "main": "index.html",
+  "name": "temp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "npx -y http-server . -p 3000 -c-1"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
   },
-  "keywords": [
-    "attendance",
-    "google-sheets",
-    "web-app"
-  ],
-  "author": "Antigravity",
-  "license": "MIT"
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.1",
+    "date-fns": "^4.4.0",
+    "lucide-react": "^1.23.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "oxlint": "^1.71.0",
+    "tailwindcss": "^4.3.2",
+    "vite": "^8.1.1"
+  }
 }

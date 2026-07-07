@@ -1,0 +1,16 @@
+{
+  "name": "web-attendance",
+  "version": "1.0.0",
+  "description": "Google Sheets-Based Student Attendance Web App",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server . -p 3000 -c-1"
+  },
+  "keywords": [
+    "attendance",
+    "google-sheets",
+    "web-app"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
